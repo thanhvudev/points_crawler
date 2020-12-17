@@ -6,8 +6,6 @@
 # In[2]:
 
 
-pip install pandas requests bs4
-
 
 # This repo contains an introduction to [Jupyter](https://jupyter.org) and [IPython](https://ipython.org).
 # 
