@@ -3,7 +3,10 @@
 
 # # Welcome to Jupyter!
 
-# In[1]:
+# In[2]:
+
+
+pip install pandas requests bs4
 
 
 # This repo contains an introduction to [Jupyter](https://jupyter.org) and [IPython](https://ipython.org).
@@ -18,7 +21,7 @@
 # * [Running a Secure Public Notebook Server](../examples/Notebook/Running%20the%20Notebook%20Server.ipynb#Securing-the-notebook-server)
 # * [How Jupyter works](../examples/Notebook/Multiple%20Languages%2C%20Frontends.ipynb) to run code in different languages.
 
-# In[2]:
+# In[3]:
 
 
 import requests
@@ -29,7 +32,7 @@ from datetime import date
 from datetime import datetime
 
 
-# In[3]:
+# In[4]:
 
 
 url = 'http://diemthi.hcm.edu.vn/Home/Show/'
@@ -71,7 +74,7 @@ def calculateAge(birthDate):
 
 
 
-# In[4]:
+# In[5]:
 
 
 def fieldCleaner(field):
@@ -119,7 +122,7 @@ for sbd in range (2000001,2074719):
     tr = content.find_all('tr')
     if (len(tr)==0): continue
     student_num = student_num+1
-	print(student_num)
+    print(student_num)
     main = bs4.BeautifulSoup(str(tr[1]),"html.parser")
     mainFields = main.find_all('td')
     thisStudentPointsList = []
@@ -237,12 +240,6 @@ df = pandas.DataFrame({'name':name,
                   'NS-Mean':khtn,
                   'Note':note})
 df.to_json('data_points.json')
-
-
-# In[ ]:
-
-
-print(len(math))
 
 
 # In[ ]:
